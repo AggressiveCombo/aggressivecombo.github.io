@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Does YouTube support 120FPS yet?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            user-select: none;
+        }
+
+        header p {
+            font-size: 2.25rem;
+            margin-top: 7rem;
+            margin-bottom: 5rem;
+        }
+
+        #top-main {
+            padding-top: 2rem;
+        }
+
+        #main-text {
+            font-size: 15rem;
+            font-weight: bold;
+            color: red;
+        }
+
+        p, a {
+            font-size: 1.5rem;
+        }
+
+        footer a {
+            font-size: 1.75rem;
+        }
+
+        .extra-info {
+            cursor: help;
+            text-decoration: underline dotted;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Does YouTube support 120FPS yet?</p>
+    </header>
+    <main>
+        <p id="main-text">NO.</p>
+
+        <p id="top-main">
+            It has been 
+            <span class="extra-info" id="days-since" title="YouTube added 8K support on June 7, 2015"></span> 
+            days since YouTube added 8K support.
+        </p>
+        <p>Only ~0.2% of users can natively play 8K content.</p>
+        <p>About <span class="extra-info" title="This is for the amount of Android mobile devices. There is a large amount of monitors (and televisions) that have refresh rates of more than 60Hz.">38%</span> of users have 120Hz+ devices.</p>
+    </main>
+
+    <br>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=8E3Qz_cGP5o">Explanation</a>
+    </footer>
+
+    <script>
+        const releaseDate = new Date("2015-06-07");
+        const today = new Date();
+        const msPerDay = 1000 * 60 * 60 * 24;
+        const daysSince = Math.floor((today - releaseDate) / msPerDay);
+        document.getElementById("days-since").textContent = daysSince;
+    </script>
+</body>
+</html>
