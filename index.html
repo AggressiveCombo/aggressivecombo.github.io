@@ -56,7 +56,7 @@
 
         <p id="top-main">
             It has been 
-            <span class="extra-info" id="days-since" title="YouTube added 8K support on June 7, 2015"></span> 
+            <span class="extra-info" id="days-since" title="YouTube added 8K support on June 7, 2015."></span> 
             days since YouTube added 8K support.
         </p>
         <p>Only ~0.2% of users can natively play 8K content.</p>
@@ -74,7 +74,7 @@
         const today = new Date();
         const msPerDay = 1000 * 60 * 60 * 24;
         const daysSince = Math.floor((today - releaseDate) / msPerDay);
-        document.getElementById("days-since").textContent = daysSince;
+        document.getElementById("days-since").textContent = daysSince.toLocaleString();
     </script>
 </body>
 </html>
